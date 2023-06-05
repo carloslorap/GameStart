@@ -1,0 +1,271 @@
+/* menu de despliegue */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to top right,white 52%,#63C7FF 50% );
+}
+
+.navigation {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    width: 70px;
+    border-radius: 10px;
+    box-sizing: initial;
+    border-left: 5px solid white;
+    background: rgb(99, 199, 255);
+    transition: 0.5s;
+    overflow: hidden;
+
+}
+
+.navigation.active { 
+    width: 300px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navigation ul li b:nth-child(1) {
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background: white;
+    display: none;
+}
+
+.navigation ul li b:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    background: rgb(99, 199, 255);
+}
+
+.navigation ul li b:nth-child(2) {
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    background: white;
+    display: none;
+}
+
+.navigation ul li b:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background: rgb(99, 199, 255);
+}
+
+
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2) {
+    display: block;
+}
+
+.navigation ul li.active {
+    background: white;
+
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation ul li.active a {
+    color: rgb(53, 47, 47);
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .bi {
+
+    font-size: 1.4em;
+
+}
+
+.navigation ul li a .title {
+
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+
+.toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgb(99, 199, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle.active {
+    background: #ff4d89;
+}
+
+.toggle ion-icon {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    display: none;
+}
+
+.toggle ion-icon.open,
+.toggle.active ion-icon.close {
+    display: block;
+}
+
+.toggle ion-icon.close,
+.toggle.active ion-icon.open {
+    display: none;
+}
+
+/* menu de despliegue */
+
+/* .port{
+  position: absolute;
+  left:28%;
+} */
+main {
+    display: flex;
+
+
+}
+
+.port img {
+    width: 45%;
+    height: 69%;
+    border-radius: 15px;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+
+}
+
+.contenedor {
+    position: absolute;
+    background: white;
+    width: 70%;
+    height: 60%;
+    display: flex;
+    margin-left: 25%;
+    margin-top: 10%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 9px #7a7b8a;
+
+}
+
+.funcion-text {
+    margin-left: 2%;
+    width: 47%;
+    height: 67%;
+    padding-top: 2%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+
+}
+
+.funcion-text .titulo {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 800;
+    color: #535461;
+}
+
+.btn-info {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 4px 30px;
+}
+
+.funcion-text .content-btn {
+    width: 30%;
+    height: 10%;
+    border-radius: 15px;
+    background: rgb(99, 199, 255);
+    align-items: center;
+}
+
+.funcion-text .game {
+    font-weight: bold;
+    color: rgb(99, 199, 255);
+    font-style: normal;
+}
+
+header {
+    position: relative;
+    width: 900%;
+    height: 14.5%;
+    text-align: end;
+
+}
+
+header .head {
+    position: relative;
+    display: inline-flex;
+}
+
+header .head h1 {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #535461;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.head h1{
+    border-bottom:3px solid rgb(99, 199, 255);
+    border-radius: 3px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta</title>
+    <link rel="stylesheet" href="css/ruleta.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="navigation ">
+        <ul>
+            <li class="list active"> 
+                <b></b>
+                <b></b>
+                <a >
+                     <span class="icon"><i class="bi bi-house-door"></i></span>
+                     <span class="title"> home</span>
+                </a>
+            </li>
+     
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="cube.html">
+                     <span class="icon"><i class="bi bi-grid-3x3"></i></span>
+                     <span class="title"> 
+                        memory game</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="treslineas.html">
+                     <span class="icon"><i class="bi bi-grid-3x3-gap"></i></span>
+                     <span class="title"> 
+                        the roulette</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="ruleta.html">
+                     <span class="icon"><i class="bi bi-gear"></i></span>
+                     <span class="title"> config</span>
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+<div class="container">
+    <div class="spinbtn">
+SPIN
+    </div>
+    <div class="wheel">
+        <div class="number" style="--i:1;--clr:#db7093;"><span>carlos</span></div>
+        <div class="number" style="--i:2;--clr:#20b2aa;"><span>kevin</span></div>
+        <div class="number" style="--i:3;--clr:#d63e92;"><span>gabriel</span></div>
+        <div class="number" style="--i:4;--clr:#daa520;"><span>axl</span></div>
+        <div class="number" style="--i:5;--clr:#ff340f;" id="kevin"><span>fiorella</span></div>
+        <div class="number" style="--i:6;--clr:#ff7f50;"><span>milagros</span></div>
+        <div class="number" style="--i:7;--clr:#3cb371;"><span>rodrigo</span></div>
+        <div class="number" style="--i:8;--clr:#4169e1;"><span>giancarlos</span></div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    let wheel =document.querySelector(".wheel");
+    let spinbtn=document.querySelector(".spinbtn");
+  
+  
+    let value=Math.ceil(Math.random() *3600);
+
+
+    
+    spinbtn.onclick=function(){
+        wheel.style.transform="rotate(" +value+"deg)";
+         value += Math.ceil(Math.random() *3600);
+    }
+
+    
+</script>
+
+
+
+
+    <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+    </div> 
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
